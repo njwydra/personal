@@ -1,14 +1,7 @@
-import { Name } from "../../assets/name";
-import preactLogo from "../../assets/preact.svg";
+import { Name, NameLayout } from "../../assets/name";
+import { Header } from "../../components/Header";
 import "./style.css";
 
 export function Home() {
-  return (
-    <div class="home">
-      <Name
-        componentProps={{ strokeWidth: 5, width: 200, height: 60 }}
-        layout="stacked"
-      />
-    </div>
-  );
+  return <div class="home"></div>;
 }

@@ -1,7 +1,12 @@
 import { SVGProps } from "preact/compat";
 
+export enum NameLayout {
+  STACKED = "stacked",
+  INLINE = "inline",
+}
+
 type NameProps = {
-  layout?: "stacked" | "inline";
+  layout?: NameLayout;
   componentProps: SVGProps<SVGSVGElement>;
 };
 
@@ -24,6 +29,7 @@ export const Name = ({ ...props }: NameProps) => (
 const FirstName = ({
   width = "150",
   height = "40",
+  className = "",
   ...props
 }: SVGProps<SVGSVGElement>) => (
   <svg
@@ -32,6 +38,7 @@ const FirstName = ({
     viewBox="0 0 1300 625"
     width={width}
     height={height}
+    className={`signature-svg ${className}`}
     {...props}
   >
     {/* N */}
@@ -72,6 +79,7 @@ const FirstName = ({
 const LastName = ({
   width = "200",
   height = "40",
+  className = "",
   ...props
 }: SVGProps<SVGSVGElement>) => (
   <svg
@@ -80,6 +88,7 @@ const LastName = ({
     viewBox="0 0 1700 625"
     width={width}
     height={height}
+    className={`signature-svg ${className}`}
     {...props}
   >
     {/* W */}
